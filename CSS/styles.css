@@ -551,7 +551,7 @@ small {
 }
 
 .btn-meny {
-  margin-left: auto;
+  margin-left: 2rem;
 }
 
 .hero-header {
@@ -916,10 +916,10 @@ li {
   grid-template-columns: 1fr 1fr;
 }
 
-  .contact-box {
-    padding: 0.5rem;
-    border: 1px solid var(--border-grey300);
-    border-radius: 0.5rem;
+.contact-box {
+  padding: 0.5rem;
+  border: 1px solid var(--border-grey300);
+  border-radius: 0.5rem;
 
   img {
     height: 3rem;
@@ -937,28 +937,27 @@ li {
   }
 }
 
-  a:focus-visible {
-    border-radius: 2rem;
-    box-shadow: var(--shadow-tab);
-  }
+a:focus-visible {
+  border-radius: 2rem;
+  box-shadow: var(--shadow-tab);
+}
 
-  .btn-call {
-    color: var(--color-brand);
-  }
+.btn-call {
+  color: var(--color-brand);
+}
 
-  .btn-text {
-    color: var(--system-success);
-  }
+.btn-text {
+  color: var(--system-success);
+}
 
-  em {
-    font-size: 0.875rem;
-    font-style: normal;
-    line-height: var(--line-height);
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    margin-left: 0.5rem;
-  }
-
+em {
+  font-size: 0.875rem;
+  font-style: normal;
+  line-height: var(--line-height);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+}
 
 /* Some design suggestions for accordion taken from Chat GPT 4o */
 .faq-accordion {
@@ -1069,11 +1068,6 @@ li {
   padding-bottom: 3rem;
 }
 
-/* NOTE TO TEACHER: I've only just started working on the section below. I worked towards the
-goals for "G" in this course but have added some more features like darkmode for my own 
-learning in the time I had left. In my next project I will use SCSS from the beginning,
-it seems handy and will make building the responsive design way less messy.*/
-
 /* Non-wrapper-related Media queries */
 /* XSMALL ('mobile')*/
 @media (width < 576px) {
@@ -1082,6 +1076,55 @@ it seems handy and will make building the responsive design way less messy.*/
   }
   .hidden-XS-S {
     display: none;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    grid-template-areas:
+      "nav"
+      "hero-header"
+      "hero-main";
+  }
+
+  .hero-header {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .display {
+    font-size: 2.5rem;
+    padding: 1rem;
+  }
+
+  .hero-main {
+    p {
+      text-align: center;
+      text-wrap: balance;
+    }
+  }
+
+  .btn-tablet {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .btn-market {
+    width: 100%;
+    height: 3.5rem;
+    padding: 0.5rem 2rem;
+
+    img {
+      width: 60%;
+      height: auto;
+    }
+  }
+
+  .discover {
+    margin-top: 0;
+    margin-inline: auto;
   }
 }
 
@@ -1099,9 +1142,9 @@ it seems handy and will make building the responsive design way less messy.*/
     display: grid;
     grid-template-columns: 1.5fr 2fr;
     grid-template-areas:
-    "nav nav"
-    "hero-header hero-header"
-    "hero-main hero-pics";
+      "nav nav"
+      "hero-header hero-header"
+      "hero-main hero-pics";
   }
 
   .hero-header {
@@ -1114,24 +1157,21 @@ it seems handy and will make building the responsive design way less messy.*/
     }
   }
 
-
   .btn-tablet {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
 
-
   .front-img {
     position: relative;
     display: block;
     bottom: -1rem;
-  
+
     img {
       max-height: 30rem;
       width: auto;
     }
-
   }
 
   .feat-header {
@@ -1146,18 +1186,18 @@ it seems handy and will make building the responsive design way less messy.*/
       display: block;
       text-align: center;
     }
+  }
+
+  .main-functions {
+    h2 {
+      font-size: 2rem;
     }
 
-    .main-functions {
-      h2 {
-        font-size: 2rem;
-      }
-
-      #carousel-texts {
-        position: relative;
-        display: inline-block;
-        padding: 6rem 45%;
-      } 
+    #carousel-texts {
+      position: relative;
+      display: inline-block;
+      padding: 6rem 45%;
+    }
   }
 
   .faq {
@@ -1165,13 +1205,13 @@ it seems handy and will make building the responsive design way less messy.*/
     justify-content: center;
     gap: 1rem;
     grid-template-areas:
-    "faq-header"
-    "faq-accordion"
-    "faq-contact";
+      "faq-header"
+      "faq-accordion"
+      "faq-contact";
   }
 
   .faq-header {
-    text-align: center; 
+    text-align: center;
   }
 
   .text-sub {
